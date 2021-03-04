@@ -1,1 +1,26 @@
+업무: PopupSetting 로직파악
+
+PopupSetting 클래스는 namespace StzPopupManager의 StzPopup을 상속받음
+
+StzPopup은 팝업에 필요한 공통적인 데이터를 갖고있는 추상클래스.
+
+STZBehbavior
+주석엔 MonoBehavior의 gameObject, transform, Component를 호출할 때 C++단위로 호출해야해서 속도가 느리다고 명시되어있다.
+C++ 단위에서 호출한다는 것이, 제가 이해한 바로는 내부적으로 call by reference를 해도 매번 검색하는 연산이 드는 걸로 이해했다. 
+그래서 한 번 호출한 객체는 메모리에 캐싱해서 다시 부를 때, 검색 연산을 줄여 접근 속도를 빠르게 하기 위해 사용한다.
+
+PopupSetting엔 환경설정에 연관된 오브젝트들을 미리 캐싱한다.
+
+PrevOpen, PostOpen 등 가상함수는 각각의 팝업창들이 오픈, 종료 등 각각 상황에 맞게 호출되는 메서드다.
+상위클래스에 원본 메서드를 우선 실행시키고, 필요시에 상속 받은 파생클래스에서 오버라이딩해서 사용한다.
+
+PostOpen
+싱글톤 계정매니저에 있는 playerid가 없으면 정규식을 이용한 문자변환을 통해 넣어준다.
+객체 text에 데이터(플레이어아이디, 현재버전, 최신버전)을 최신화한다.
+토글 객체(sound, bgm, noti)들이 on, off 상태를 확인 후 최신화한다.
+
+UniRx 라이브러리. 해당 시간동안 아무리 버튼을 눌러도 한번만 누른 것으로 판단한다
+
+
+
 

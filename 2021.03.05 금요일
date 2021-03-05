@@ -1,4 +1,4 @@
-업무: PopupStageQuit 
+업무: PopupStageQuit 만들어보기
 
 StzPopup 인터페이스 안에 
 protected Hashtable _param;

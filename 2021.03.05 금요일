@@ -1,1 +1,11 @@
 업무: PopupStageQuit 
+
+StzPopup 인터페이스 안에 
+protected Hashtable _param;
+파라미터는 일반적인 데이터를 각 팝업을 생성할 때 넘겨줄려고 사용한다. (리터럴 상수 등)
+데이터를 해쉬테이블에 저장했다가 다른 팝업을 생성할 때 키 값을 통해 넘겨주고, 그에 따른 이벤트 처리용.
+
+IGUIController.cs
+인게임안에 Popup에 대해 관리한다. 
+왜 그렇게 했는지는 솔직히 잘모름.
+그 안에서도 PopupManger를 통해 복사생성한다.

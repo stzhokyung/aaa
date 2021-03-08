@@ -27,3 +27,15 @@ Func<RoyalBoost.EBoostGrade, string> _getRoyalBoostEachRate = null;
 
 - struct RoyalBoost
 로얄 모드에 사용하는 부스트의 데이터를 모아놓은 테이블
+
+staticValue는 static에 데이터가 맞는지 확인해서 value값을 갖고오는 것 같음. 반황형은 Systems 클래스
+TryGetValue로 참, 거짓을 통해 참이면 dictionary의 Value값, 거짓이면 인자로 넣었던 defaultValue값이 포함된 Systems
+
+_getRoyalBoostEachRateImpl의 반환값은 string임. 
+델리게이트를 이용해 반환할 코드를 짜줌.
+Clamp(((int)inGrade) - 1의 -1은 잘모르겠음.
+아까 찾은 targetRates이 dictionary에 없다면 Systems 안에 value는 null임. 그럴 경우 0을 return
+
+
+
+

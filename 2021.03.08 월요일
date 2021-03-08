@@ -47,5 +47,30 @@ _dummyStatic은 Dictionary로 현재 갖고있는 로열부스트의 정보들�
 
 
 
+Popupmail
+질문 : SkeletonGraphic은 왜 Image로 안한건지? 단순 애니메이션 이미지같음.
+대충 Spine(척추)라는 걸 봐서 메쉬의 버텍스처럼 텍스처의 uv의 좌표를 왜곡시켜 애니메이션을 만드는 것으로 보임. 그래서 SkeletonGraphic이라는 클래스를 만들었구.
+
+[SerializeField]MailScrollView _scrollView;
+로열부스트스크롤과 마찬가지로 각각 독립적인 스크롤 뷰를 생성. 메일스크롤뷰에는 OBJ_EMPTY 게임오브젝트 등 추가적인 기능을 할 경우가 필요하니 따로 나눔.
+
+public List<ServerDatas.Message> msgCommonList = new List<ServerDatas.Message>();
+메세지 데이터들을 담는 List.
+
+CheckNewMessage()는 새로운 메세지 있는지 확인하는 부분.
+안읽은 메세지 여부에 따라 mail 버튼 이미지 변경 및 알람 이미지 출력
+
+GenerateMessageList()는 메시지 리스트를 지웠다가 다시 생성하는 부분같음.
+
+advertisement은 광고
+
+IEnumerator Co_LoadMailData()
+간단하게 요약하자면 IEnumerator는 Custom한 State를 만들어 while이나 foreach문으로 편리하게 쓰거나 Coroutin으로 사용하는 Interface의 일종.
+
+
+
+
+
+
 
 

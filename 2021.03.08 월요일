@@ -67,6 +67,10 @@ advertisement은 광고
 IEnumerator Co_LoadMailData()
 간단하게 요약하자면 IEnumerator는 Custom한 State를 만들어 while이나 foreach문으로 편리하게 쓰거나 Coroutin으로 사용하는 Interface의 일종.
 
+RemoveMessage()
+ServerModel안에 있는 massget를 받아와서 메세지를 지움.
+그 후에 SetUI()를 통해 위에 했던 GenerateMessageList() 함수를 실행결정하고, msgCommonList 딕셔너리가 초기화.
+
 
 
 

@@ -36,6 +36,7 @@ _getRoyalBoostEachRateImpl의 반환값은 string임.
 델리게이트를 이용해 반환할 코드를 짜줌.
 Clamp(((int)inGrade) - 1의 -1은 잘모르겠음.
 아까 찾은 targetRates이 dictionary에 없다면 Systems 안에 value는 null임. 그럴 경우 0을 return
+매개 변수 형식이 델리게이트 매개 변수 형식과 일치하므로 무명 메서드를 형식 'Func<RoyalBoost.EBoostGrade, string>'으로 변환할 수 있다.
 
 _scrollView.Reset();
 SetTotalCellCount(RoyalBoostController.GetController().GetBoostCount());

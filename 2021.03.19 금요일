@@ -1,0 +1,9 @@
+업무: 피드백받은 것
+
+싱글톤 대체 O
+
+클래스명 수정 O
+
+bool형 Is수정 O
+
+CreateEmoji(obj_emoticonContainer, PopupBlitzReadyEmoji.emoticonName, true); O

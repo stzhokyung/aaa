@@ -1,4 +1,7 @@
 업무: static 데이터 연동
+[클라/수정/이모티콘] 스태틱 데이터 파싱 확인 후 코드 일괄 수정, 앱 홈키로 내렸을 때 데이터 저장
+EmojiContentScroll.cs, EmojiIME.cs
+
 
 config set 시점 O
 생성할 때, 앱 내렸을 때

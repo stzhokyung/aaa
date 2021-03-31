@@ -1,17 +1,14 @@
 업무: Linq 
 
-
 - 피드백 사항들
 
 - 구조체 바꾼것
 tab 데이터 왜 저장하는지 설명
 
-- 스태틱 엑셀 시트 보여주기
-
 - 데이터 불러오는 것
 
 - Enumerator, Enumarable, Linq 설명
-
+Linq는 지연된 실행
 
 where과 select의 차이는 명확함
 where는 필터역할, select은 최정적으로 결과가 추출되는 변수인데
